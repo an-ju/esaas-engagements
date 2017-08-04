@@ -15,7 +15,7 @@ CSV.foreach("#{Rails.root}/db/apps.csv") do |p|
       App.create!(
       :org => org,
       :name => appname,
-      :status => :inactive,
+      :status => :in_use_and_wants_improvement,
       :description => p[13] || 'NA',
       :deployment_url => p[14],
       :repository_url => p[15] || 'http://')
@@ -31,7 +31,7 @@ CSV.foreach("#{Rails.root}/db/apps.csv") do |p|
       :poster_url => p[19],
       :presentation_url => p[18],
       :prototype_deployment_url => p[14],
-      :student_names => p[25]
+      :student_names => p[25].nil? ? 'unknown' : p[25]
       )
   else
     puts "No org #{p[11]}"

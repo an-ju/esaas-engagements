@@ -1,3 +1,29 @@
+GIT
+  remote: https://github.com/an-ju/ProjectMetrics.git
+  revision: 216ba4f129b173fc61c7b5ad7b43486e46bfc286
+  specs:
+    project_metrics (0.1.0)
+      activesupport
+
+GIT
+  remote: https://github.com/an-ju/project_metric_code_climate.git
+  revision: 6f2b09ac7894f1da7439682d19b97a8f89041b71
+  specs:
+    project_metric_code_climate (0.1.0)
+
+GIT
+  remote: https://github.com/an-ju/project_metric_test_coverage.git
+  revision: 17841015abcbb6d7efcef7d7caac574ea6769065
+  specs:
+    project_metric_test_coverage (0.1.0)
+
+GIT
+  remote: https://github.com/an-ju/project_metric_travis_ci.git
+  revision: 4bacccff8fd5e9cced12b7c40579402bff196e78
+  specs:
+    project_metric_travis_ci (0.1.0)
+      faraday (~> 0.1, >= 0.1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,7 +65,7 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
-    autoprefixer-rails (7.1.2.1)
+    autoprefixer-rails (7.1.2.4)
       execjs
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -48,9 +74,9 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
-    capybara (2.14.4)
+    capybara (2.15.1)
       addressable
-      mime-types (>= 1.16)
+      mini_mime (>= 0.1.3)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
@@ -94,6 +120,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faraday (0.12.2)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -115,11 +143,11 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (5.0.1)
+    haml (5.0.2)
       temple (>= 0.8.0)
       tilt
-    i18n (0.8.5)
-    jasmine-core (2.6.4)
+    i18n (0.8.6)
+    jasmine-core (2.7.0)
     jasmine-rails (0.14.1)
       jasmine-core (>= 1.3, < 3.0)
       phantomjs (>= 1.9)
@@ -146,10 +174,12 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_mime (0.1.3)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     multi_json (1.12.1)
     multi_test (0.1.2)
+    multipart-post (2.0.0)
     nenv (0.3.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -222,7 +252,11 @@ GEM
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
     ruby_dep (1.5.0)
-    sass (3.4.25)
+    sass (3.5.1)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
@@ -252,7 +286,7 @@ GEM
     temple (0.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
@@ -283,6 +317,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  project_metric_code_climate!
+  project_metric_test_coverage!
+  project_metric_travis_ci!
+  project_metrics!
   rails (= 4.2.7)
   rails_12factor
   rspec-rails
@@ -298,4 +336,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

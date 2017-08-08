@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718172604) do
+ActiveRecord::Schema.define(version: 20170804212051) do
 
   create_table "apps", force: :cascade do |t|
     t.integer  "org_id"
@@ -57,6 +57,17 @@ ActiveRecord::Schema.define(version: 20170718172604) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "metric_samples", force: :cascade do |t|
+    t.string   "metric_name"
+    t.text     "image"
+    t.float    "score"
+    t.integer  "app_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "metric_samples", ["app_id"], name: "index_metric_samples_on_app_id"
 
   create_table "orgs", force: :cascade do |t|
     t.string   "name"

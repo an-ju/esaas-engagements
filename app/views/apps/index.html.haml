@@ -7,6 +7,9 @@
       %th Name
       %th Organization
       %th Description
+      %th Code Climate GPA
+      %th Test Coverage
+      %th Build Status
       %th{:colspan => "2"}
   %tbody
     - @apps.each do |app|
@@ -14,6 +17,15 @@
         %td= link_to app.name, app
         %td= app.org.name
         %td= app.description
+        %td
+          - m = app.metric_code_cliamte
+          = m.nil? ? 'unknown' : m
+        %td
+          - m = app.metric_test_coverage
+          = m.nil? ? 'unknown' : m
+        %td
+          - m = app.metric_travis_ci
+          = m.nil? ? 'unknown' : m
         %td= link_to 'Edit', edit_app_path(app), :title => "Last update: #{app.updated_at.strftime('%c')}", :class => 'btn btn-primary'
         %td= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'
 %br/

@@ -41,6 +41,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
+# Use some metrics
+gem 'project_metrics', git: 'https://github.com/an-ju/ProjectMetrics.git'
+gem 'project_metric_code_climate', git: 'https://github.com/an-ju/project_metric_code_climate.git'
+gem 'project_metric_test_coverage', git: 'https://github.com/an-ju/project_metric_test_coverage.git'
+gem 'project_metric_travis_ci', git: 'https://github.com/an-ju/project_metric_travis_ci.git'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '~> 0.4.0'
